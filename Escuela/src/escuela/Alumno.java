@@ -48,10 +48,19 @@ public class Alumno {
     public void setNota(int nota) {
         this.nota = nota;
     }
+    public String situacion(int nota){
+       String estado;
+        if (nota >=7 && nota<10) {
+           estado = "Muy bien";
+        } else {
+           estado=" vas bien pero tan bien";
+        }
+    return estado;
+    }
 
     @Override
     public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", nota=" + nota + '}';
+        return "Alumno{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", nota=" + nota + "situación"+situacion(nota)+'}';
     }
 
 }
